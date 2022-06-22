@@ -24,5 +24,5 @@ const Template: Story<any> = args => <Button {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  children: '哈哈哈哈',
+  children: '嘻嘻嘻嘻',
 };
