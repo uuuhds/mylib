@@ -1,6 +1,4 @@
-import React from 'react';
+import { Button } from 'antd';
 import './button.less';
 
-export const Button = () => {
-  return <button className="haha">哈哈哈哈</button>;
-};
+export { Button };

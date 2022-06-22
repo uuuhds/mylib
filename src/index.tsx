@@ -1,7 +1,8 @@
-import React, { FC, HTMLAttributes, ReactChild } from 'react';
+import React, { FC, HTMLAttributes, ReactNode } from 'react';
+import './index.less';
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
-  children?: ReactChild;
+  children?: ReactNode;
 }
 
 export const Thing: FC<Props> = ({ children }) => {
@@ -9,3 +10,4 @@ export const Thing: FC<Props> = ({ children }) => {
 };
 
 export * from './components/button';
+export * from './components/todos';

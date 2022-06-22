@@ -1,14 +1,16 @@
+const theme = require('../theme.json');
+
 module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-actions',
   ],
-  // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {
-    check: true, // type-check stories during Storybook build
+    check: true,
   },
+  framework: '@storybook/react',
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.less$/,
@@ -24,10 +26,8 @@ module.exports = {
         {
           loader: require.resolve('less-loader'),
           options: {
-            lessOptions: {
-              modifyVars: { '@primary-color': '#1DA57A' },
-              javascriptEnabled: true,
-            },
+            modifyVars: theme,
+            javascriptEnabled: true,
           },
         },
       ],
