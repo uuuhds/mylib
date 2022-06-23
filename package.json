@@ -16,6 +16,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "updateSnapshot": "npm test -- -u",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
