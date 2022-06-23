@@ -10,5 +10,4 @@ export const Thing: FC<Props> = ({ children }) => {
 };
 
 export * from './components/button';
-export * from './components/todos';
 export * from './components/menu';
